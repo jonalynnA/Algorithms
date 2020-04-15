@@ -3,22 +3,22 @@
 import argparse
 
 
-def find_max_profit(price):
+def find_max_profit(prices):
     bought_price = 0
     sold_price = 0
     max_profit = 0
 
-    for i in range(len(price)-1):
+    for i in range(len(prices)-1):
 
-        if bought_price == 0 and price[i] < price[i+1]:
-            bought_price = price[i]
+        if bought_price == 0 and prices[i] < prices[i+1]:
+            bought_price = prices[i]
 
-        elif bought_price != 0 and price[i] > price[i+1]:
-            if sold_price < price[i]:
-                sold_price = price[i]
+        elif bought_price != 0 and prices[i] > prices[i+1]:
+            if sold_price < prices[i]:
+                sold_price = prices[i]
 
     if bought_price == 0:
-        bought_price = price[-1]
+        bought_price = prices[-1]
     max_profit = sold_price - bought_price
     global buy
     buy = prices.index(bought_price)
