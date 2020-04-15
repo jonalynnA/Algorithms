@@ -31,7 +31,7 @@ prices = ([10, 7, 5, 8, 11, 9])
 profit = find_max_profit(prices)
 
 print(
-    f"\nA profit of \033[32m${profit}\033[37m can be made from the stock prices {prices}.\nBuy on day: {buy}. \nSell on day {sell}\n")
+    f"\nA profit of \033[92m${profit}\033[37m can be made from the stock prices {prices}.\n\033[94mBuy on day: {buy}\033[37m. \n\033[94mSell on day {sell}\033[37m.\n")
 
 
 """ if __name__ == '__main__':
